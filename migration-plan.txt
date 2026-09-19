@@ -1,0 +1,27 @@
+
+
+Currently all the services are in azure 
+
+
+Services: 
+    lumivis-app                 ClusterIP   10.0.21.44     <none>        80/TCP               67d
+    rabbitmq-mgmt               ClusterIP   10.0.35.1      <none>        5672/TCP,15672/TCP   543d
+    samanyastra-api             ClusterIP   10.0.185.204   <none>        80/TCP               72d
+    samanyastra-ats             ClusterIP   10.0.56.201    <none>        80/TCP               58d
+    samanyastra-auth            ClusterIP   10.0.74.150    <none>        80/TCP               68d
+    samanyastra-books           ClusterIP   10.0.104.205   <none>        80/TCP               97d
+    samanyastra-celery          ClusterIP   10.0.9.63      <none>        80/TCP               67d
+    samanyastra-mailer          ClusterIP   10.0.5.174     <none>        80/TCP               67d
+    samanyastra-mailer-celery   ClusterIP   10.0.222.122   <none>        80/TCP               67d
+    samanyastra-public          ClusterIP   10.0.76.64     <none>        80/TCP               470d
+
+- These services are running in kubernets under free tier with 2nodes - d4pls6 node - chepest possible      
+- all these are managed with cluster issuer ssl certificate
+- mapped with ngnix - created on own. 
+- files are managed with azure storage (blob) - THEY CAN STILL BE ON AZURE - cheap only & code depend on azure storage
+- azure container registry for container - can migrate if we have similar one in aws but ease of access is simple in azure. 
+- Database is already in aws 
+
+
+Now plan is to migrate them to AWS - light sail or something - we have startup credtis 500$ left and also, light sail will be cheaper and serving our purpose for 500 or less users
+
